@@ -1,8 +1,8 @@
-import psycopg2 # for database
+import MySQLdb # for database
 from werkzeug import generate_password_hash, check_password_hash    # for saving passwords in hashed form
 
 # connectivity to the database
-conn = psycopg2.connect("dbname='hms' user='postgres' host='localhost' password='admin'")
+conn = MySQLdb.connect('localhost',"root" ,'root',"hms")
 cur = conn.cursor()
 
 
